@@ -5,6 +5,8 @@
 
 <div class="card-columns ">
     <!--foo valor de variable local -->
+    <!-- desde aqui mandamos info al component hijo component tarjeta -->
+    <!-- foo nombre variable local  -->
     <app-heroe-tarjeta (heroeSeleccionado)="verHeroe($event)" [heroe]="foo" [index]="i" *ngFor="let foo of heroes; let i = index"></app-heroe-tarjeta>
 
 

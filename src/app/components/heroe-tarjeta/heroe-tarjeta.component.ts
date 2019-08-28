@@ -12,8 +12,8 @@ export class HeroeTarjetaComponent implements OnInit {
     @Input() heroe: any = {};//propiedad normal se agrefa decorador input
     @Input() index: number;//propiedad recibida desde afuera de componente 
   
-  @Output() heroeSeleccionado: EventEmitter<number>;
-            //observable
+  @Output() heroeSeleccionado: EventEmitter<number>;//heroeSeleccionado es un observable
+            
 
   //propiedad que el padre nesecita escuchar 
     constructor(private router: Router) { 
@@ -23,10 +23,10 @@ export class HeroeTarjetaComponent implements OnInit {
   ngOnInit() {
 
   }
-verHeroe(){
+verHeroe(){//f(x) btn ver mas
 //console.log( this.index);
-//this.router.navigate(['/heroe', this.index]);
-this.heroeSeleccionado.emit( this.index);
+this.router.navigate(['/heroe', this.index]);
+//this.heroeSeleccionado.emit( this.index);
 
 }
 
